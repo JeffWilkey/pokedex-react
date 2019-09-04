@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Manjari:100,400,700&display=swap");
+
+.logo {
+  display: block;
+  margin: 10px auto;
+  max-height: 80px;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: Manjari;
+  background-color: #fff;
+}
+
+.card-search-header {
+  margin-bottom: 0;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-col-1 {
+  flex: 1;
+
+  h2 {
+    margin-top: 40px;
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce {
+  0% { transform: scale(1, 1) translateY(0); }
+  10% { transform: scale(1.1, 0.9) translateY(0); }
+  30% { transform: scale(0.9, 1.1) translateY(-100px); }
+  50% { transform: scale(1.05, 0.95) translateY(0); }
+  57% { transform: scale(1, 1) translateY(-7px); }
+  64% { transform: scale(1, 1) translateY(0); }
+  100% { transform: scale(1, 1) translateY(0); }
+}
+
+@media screen and (min-width: 720px) {
+  .card-row {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,88 @@
+h2 span {
+  span {
+    font-size: 1em;
+    font-weight: 100;
+    color: #aaa;
+  }
+}
+  
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  
+  label {
+    font-size: 1.05em;
+    font-weight: 700;
+  }
+
+  .card-info-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 3px #eaeaea;
+    margin-bottom: 20px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+    
+    p {
+      margin-left: 0.5em;
+    }
+    
+    &.small,
+    &.nomax {
+      border: none;
+      max-height: 2em;
+      margin-bottom: 8px;
+    }
+
+    &.nomax {
+      max-height: none;
+    }
+  }
+}
+
+#hp {
+  max-height: none;
+  margin: 35px 0 0 0;
+}
+
+#attacks {
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  .attack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 2em;
+    border-bottom: 2px solid #eaeaea;
+    margin-bottom: 0.8em;
+
+    h3 {
+      flex: 1;
+      text-align: right;
+    }
+
+    .attack-col {
+      flex: 5;
+    }
+  }
+}
+
+#abilities-header {
+  margin-top: 1em;
+}
+
+#costs {
+  display: flex;
+
+  .costs-column {
+    text-align: center;
+    flex: 1;
+  }
+}

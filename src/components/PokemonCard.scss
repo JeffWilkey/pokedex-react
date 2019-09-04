@@ -1,0 +1,19 @@
+.card-img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 720px) {
+  .card-img {
+    display: inline;
+    margin: 0;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
