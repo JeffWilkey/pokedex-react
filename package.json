@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
+    "pokemon": "^2.0.0",
     "pokemontcgsdk": "^1.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

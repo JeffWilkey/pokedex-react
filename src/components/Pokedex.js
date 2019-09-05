@@ -12,7 +12,8 @@ class Pokedex extends Component {
     this.state = {
       selected: null,
       cards: [],
-      startIndex: Math.floor(Math.random() * Math.floor(options.length))
+      startIndex: Math.floor(Math.random() * Math.floor(options.length)),
+      selectedCardIndex: 0
     };
   }
 
@@ -22,7 +23,7 @@ class Pokedex extends Component {
 
   handleChange = e => {
     if (this.state.selected !== e.value) {
-      pokemon.card.where({ name: e.value, series: "Base" }).then(cards => {
+      pokemon.card.where({ name: e.value }).then(cards => {
         cards = cards.filter(card => card.name === e.label);
         console.log(cards);
         this.setState({
@@ -33,8 +34,20 @@ class Pokedex extends Component {
     }
   };
 
+  handleCardIndexIncrement = (isIncrement) => {
+    if (isIncrement) {
+      this.setState({
+        selectedCardIndex: this.state.selectedCardIndex + 1
+      });
+    } else {
+      this.setState({
+        selectedCardIndex: this.state.selectedCardIndex - 1
+      });
+    }
+  }
+
   render() {
-    const { cards } = this.state;
+    const { cards, selectedCardIndex } = this.state;
     return (
       <div className="Pokedex">
         <img className="logo bounce" src="pokeball.png" alt="pokeball" />
@@ -49,11 +62,16 @@ class Pokedex extends Component {
             <div className="card-col-1">
               <h2>Card(s)</h2>
               <div className="card-container">
-                <PokemonCard selectedCard={cards[0]} />
+                <PokemonCard
+                  selectedCard={cards[selectedCardIndex]}
+                  handleIncrement={this.handleCardIndexIncrement}
+                  currentIndex={this.state.selectedCardIndex}
+                  isMaxLength={this.state.cards.length - 1 === selectedCardIndex}
+                />
               </div>
             </div>
             <div className="card-col-1">
-              <PokemonCardInfo selectedCard={cards[0]} />
+              <PokemonCardInfo selectedCard={cards[selectedCardIndex]} />
             </div>
           </div>
         </div>

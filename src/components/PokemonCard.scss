@@ -5,10 +5,33 @@
   box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
 }
 
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #333;
+
+    &[href="#prev"] {
+      margin-left: 3rem;
+    }
+
+    &[href="#next"] {
+      margin-right: 3rem;
+    }
+  }
+
+  span {
+    margin-top: 0.2rem;
+    font-family: 'Manjari';
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .card-img {
-    display: inline;
-    margin: 0;
     transition: 0.2s;
 
     &:hover {
