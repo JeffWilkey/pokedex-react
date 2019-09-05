@@ -6,7 +6,7 @@ You can [read an article here](https://dev.to/jeffwilkey/creating-a-simple-pokem
 
 ### Things to do
 
-- Utilize Pokemon TCG API to pull Pokemon instead of Array
-- Add ability to flip through all versions of a card
+- ~~Utilize Pokemon to pull Pokemon instead of Array~~ (done)
+- ~~Add ability to flip through all versions of a card~~ (done)
 - Display Card Artist
 - Add more breakpoints
