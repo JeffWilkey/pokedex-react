@@ -28,6 +28,7 @@ class Pokedex extends Component {
         console.log(cards);
         this.setState({
           selected: e.value,
+          selectedCardIndex: 0,
           cards
         });
       });
